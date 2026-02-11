@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Menu GitHub</title>
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/<username>/menu-github/main/style.css">
+<meta charset="UTF-8">
+<title>ImgMenu</title>
 </head>
 <body>
-    <div id="menu">
-        <img src="https://raw.githubusercontent.com/<username>/menu-github/main/certa.png" alt="GitHub Logo" id="github-logo">
-        <h1>Bem-vindo ao Menu!</h1>
-        <button onclick="fecharMenu()">Fechar</button>
-    </div>
-    <script src="https://raw.githubusercontent.com/<username>/menu-github/main/script.js"></script>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const imgName = urlParams.get('image'); // pega ?image=notify
+  if(imgName){
+    const img = document.createElement('img');
+    img.src = `images/${imgName}.png`; // caminho para a imagem
+    img.style.width = "100px"; // só pra visualizar
+    document.body.appendChild(img);
+  } else {
+    document.body.innerText = "Nenhuma imagem selecionada";
+  }
+</script>
 </body>
 </html>
