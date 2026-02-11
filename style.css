@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+#github-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
